@@ -1,4 +1,4 @@
-def  get_passord(number):
+def  get_password(number):
     pass_ = ''
     for i in range(1, number):
         for j in range(2, number):
@@ -9,7 +9,7 @@ def  get_passord(number):
     return pass_
 while True:
     pass_a = int(input('Введите число от 3 до 20: '))
-    result = get_passord(pass_a)
+    result = get_password(pass_a)
     print('Пароль',result)
 
 
