@@ -1,8 +1,8 @@
 def send_email(message, recipient, *, sender='university.help@gmail.com'):
-    a = '@'
+
     while True:
         if recipient.endswith(('.com', '.ru', '.net')) and sender.endswith(('.com', '.ru', '.net')):
-            if a not in recipient and sender:
+            if not '@' in recipient and not '@' in sender:
                 print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
                 continue
         else:
