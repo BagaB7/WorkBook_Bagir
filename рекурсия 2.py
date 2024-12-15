@@ -1,20 +1,20 @@
-def calculate_structure_sum(arg):
+def calculate_structure_sum(args):
     sum_ = 0
 
-    if isinstance(arg, (list, tuple, set)):
-        for i in arg:
+    if isinstance(args, (list, tuple, set)):
+        for i in args:
             sum_ += calculate_structure_sum(i)
 
-    if isinstance(arg, dict):
-        for key, value in arg.items():
+    if isinstance(args, dict):
+        for key, value in args.items():
             sum_ += calculate_structure_sum(key)
             sum_ += calculate_structure_sum(value)
 
-    if isinstance(arg, (int, float)):
-        sum_ += arg
+    if isinstance(args, (int, float)):
+        sum_ += args
 
-    if isinstance(arg, str):
-        sum_ += len(arg)
+    if isinstance(args, str):
+        sum_ += len(args)
     return sum_
 
 data_structure = [
