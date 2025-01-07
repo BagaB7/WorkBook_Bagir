@@ -53,7 +53,8 @@ class PoisonousAnimal(Animal):
         _DEGREE_OF_DANGER = 8
 
 #________________________________________________________
-class Duckbill(Brid, AquaticAnimal, PoisonousAnimal):
+class Duckbill(PoisonousAnimal, Brid, AquaticAnimal):
+
     sound = "Click-click-click"
 
     def __init__(self, speed):
@@ -64,19 +65,13 @@ class Duckbill(Brid, AquaticAnimal, PoisonousAnimal):
 
 db = Duckbill(10)
 
-
-
 print(db.live)
 
 print(db.beak)
 
-
-
 db.speak()
 
 db.attack()
-
-
 
 db.move(1, 2, 3)
 
@@ -85,7 +80,5 @@ db.get_cords()
 db.dive_in(6)
 
 db.get_cords()
-
-
 
 db.lay_eggs()
